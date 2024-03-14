@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    background-color: rgb(54, 128, 185);
+    border-radius: 0 0 16px 16px;
+}
+
+.image-icon {
+    width: 60px;
+}
+
+.container-icon {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container-icon h3 {
+    font-size: 30px;
+}
+
+
+.navgation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navgation {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}

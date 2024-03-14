@@ -1,0 +1,57 @@
+.card-container {
+    background-color: rgb(132, 132, 132);
+    width: calc(100%/4 - 10px);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 3px solid red;
+    transition: scale 400ms;
+    position: relative;
+    
+}
+
+.fav-button {
+    position: absolute;
+    bottom: 50%;
+    left: 20%;
+    right: 20%;
+    display: none;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.fav-button:hover {
+    background-color: red;
+}
+
+.card-container:hover .fav-button {
+    display: block;
+}
+
+.card-container:hover {
+    scale: 1.05;
+    background-color: linear-gradient(0,0,0,1), rgba(0,0,0,1);
+
+}
+
+.card-attributes {
+    display: flex;
+    flex-flow: row wrap;
+    gap: calc(50%);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-container-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    
+}
+
+.card-container-image {
+    width: 200px;
+}
