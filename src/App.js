@@ -6,7 +6,7 @@ import PageLogin from './components/pages/login';
 
 function App() {
   return (
-    <div className='App max-width'>
+    <div className='App'>
       <HashRouter>
       <Routes>
         <Route exact path='/' element={<PageHome/>}/>

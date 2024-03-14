@@ -1,0 +1,20 @@
+
+
+.container-card {
+    background-color: RED;
+    
+    
+}
+
+.container-login{
+    background-color: blue;
+}
+
+.center {
+    
+    display: flex;
+    flex-flow:  column nowrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}

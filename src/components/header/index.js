@@ -3,7 +3,7 @@ import './header.css';
 
 export default function Header() {
     return(
-        <header>
+        <header className='max-width'>
             <div className='container-icon'>
                 <img className='image-icon' src='./assets/pokebola.png' alt='imagem de uma pokebola, vermelha e branca'/>
                 <h3>Pokedex</h3>
