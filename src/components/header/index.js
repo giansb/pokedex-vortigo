@@ -9,9 +9,9 @@ export default function Header() {
                 <h3>Pokedex</h3>
             </div>
             <nav className='navgation'>
-                <Link to="/login">Home</Link>
-                <a href=''>profile</a>
-                <a href=''>Sair</a>
+                <Link to="/home"><i class="fa-solid fa-house"></i></Link>
+                <Link to="/profile"><i class="fa-solid fa-user"></i></Link>
+                <Link to="/login"><i class="fa-solid fa-right-from-bracket"></i></Link>
             </nav>
         </header>
     );

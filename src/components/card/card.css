@@ -55,3 +55,9 @@
 .card-container-image {
     width: 100%;
 }
+
+@media screen and (max-width: 580px) {
+    .card-container-title {
+        font-size: 70%;
+    }
+}

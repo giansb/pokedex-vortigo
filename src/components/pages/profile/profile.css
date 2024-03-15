@@ -1,0 +1,8 @@
+.perfilEdit {
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(143, 143, 143);
+    margin: 1rem 0 1rem 1rem;
+    background-color: rgb(227, 227, 227);
+    cursor: pointer;
+}
