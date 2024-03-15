@@ -7,7 +7,9 @@ export default function Card(props) {
     return(
         <div className='card-container'>
             <button className='fav-button'>Adicionar aos favoritos</button>
-            <img className='card-container-image' src={image} />
+            <div className='card-container-image-space'>
+                <img className='card-container-image' src={image} />
+            </div>
             <p className='card-container-title'>{props.name}</p>
             <div className='card-attributes'>
                 <div className='card-attributes-column'>
