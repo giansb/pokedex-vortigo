@@ -13,7 +13,7 @@ export default function PageHome() {
         <div className='container-cards max-width'>
             {
                 arrayData.map((item, id) => {
-                    return <Card name={item.name['english']} id={id+1}/>
+                    return <Card key={id+1} name={item.name['english']} id={id+1}/>
                 })
             }
         </div>
