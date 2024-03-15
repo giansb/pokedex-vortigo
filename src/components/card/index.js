@@ -10,12 +10,17 @@ export default function Card(props) {
             <img className='card-container-image' src={image} />
             <p className='card-container-title'>{props.name}</p>
             <div className='card-attributes'>
-                <p>teste</p>
-                <p>teste</p>
-                <p>teste</p>
-                <p>teste</p>
-                <p>teste</p>
-                <p>teste</p>
+                <div className='card-attributes-column'>
+                    <p>HP: {props.hp}</p>
+                    <p>Attack {props.attack}</p>
+                    <p>Defense: {props.defense}</p>
+                </div>
+
+                <div className='card-attributes-column'>
+                    <p>SP. Attack: {props.spattack}</p>
+                    <p>SP. Defense: {props.spdefense}</p>
+                    <p>Speed: {props.speed}</p>
+                </div>
             </div>
         </div>
     );
