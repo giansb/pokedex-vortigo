@@ -62,7 +62,8 @@
 }
 
 .card-container-image {
-    width: 100%;
+    width: 240px;
+    height: 240px;
 }
 
 @media screen and (max-width: 580px) {
@@ -71,10 +72,33 @@
     }
 
     .card-container-image {
-        width: 60%;
+        width: 65%;
+        height: auto;
     }
 
     .card-container {
         width: 80%;
     }
+}
+
+@media screen and (max-width: 868px ) and (min-width: 580px) {
+
+    .card-container-image-space {
+        height: 50%;
+    }
+
+    .card-container-image {
+        width: 90%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 950px ) and (min-width: 580px) {
+
+    .card-container-image {
+        width: 100%;
+        height: auto;
+    }
+
 }
