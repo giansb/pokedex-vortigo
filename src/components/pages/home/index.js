@@ -1,9 +1,14 @@
 import Card from '../../card';
 import Header from '../../header';
 import './home.css';
+import dados from '../../data/pokedex.json'
 
 
 export default function PageHome() {
+
+    let arrayData = JSON.parse(JSON.stringify(dados));
+    
+
     return(
         <>
         <Header/>
