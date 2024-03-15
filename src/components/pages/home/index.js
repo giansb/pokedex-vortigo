@@ -14,12 +14,11 @@ export default function PageHome() {
         <Header/>
         <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon'/>
         <div className='container-cards max-width'>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            {
+                arrayData.map((item, id) => {
+                    return <Card name={item.name['english']} id={id+1}/>
+                })
+            }
         </div>
         </>
     );

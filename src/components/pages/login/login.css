@@ -1,13 +1,17 @@
 
 
-.container-card {
-    background-color: RED;
-    
-    
+.container-login {
+    background-color: rgb(85, 101, 100);
+    padding: 15px;
+    border-radius: 15px;
 }
 
-.container-login{
-    background-color: blue;
+.container-login-submit{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .center {
@@ -17,4 +21,58 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background: url(../../../../public/assets/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
+
+.image-icon {
+    width: 40px;
+}
+
+.container-icon {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container-icon h3 {
+    font-size: 30px;
+}
+
+.container-login-image {
+    width: 10rem;
+    margin: 40px;
+}
+
+.input-name {
+    width: 80%;
+    text-align: left;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid rgb(143, 143, 143);
+    margin: 1rem 0;
+    background-color: rgb(227, 227, 227);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container-login-button {
+    width: 100%;
+    border: 0px;
+    padding: 10px 40px;
+    border-radius: 8px;
+    background-color: darkcyan;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container-login-button:hover {
+    background-color: orange;
+}
+
