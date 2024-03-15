@@ -14,6 +14,7 @@ export default function PageHome() {
             {
                 arrayData.map((item, id) => {
                     return <Card
+                        key={id+1}
                         name={item.name['english']}
                         id={id+1}
                         hp={item.base['HP']}
