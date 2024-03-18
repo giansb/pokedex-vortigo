@@ -16,7 +16,7 @@ export default function PageProfile() {
        <>
             <Header />
             <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' />
-            <button onClick={modalClickHandler}  className='perfilEdit'>Editar perfil</button>
+            <button onClick={modalClickHandler}  className='perfil-edit'>Editar perfil</button>
             <div className='container-cards max-width'>
                 <Card />
                 <Card />

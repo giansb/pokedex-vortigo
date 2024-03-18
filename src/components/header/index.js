@@ -2,11 +2,16 @@ import { Link } from 'react-router-dom';
 import './header.css';
 
 export default function Header() {
-    return(
+    return (
         <header className='max-width'>
             <div className='container-icon'>
-                <img className='image-icon' src='./assets/pokebola.png' alt='imagem de uma pokebola, vermelha e branca'/>
+                <img className='image-icon' src='./assets/pokebola.png' alt='imagem de uma pokebola, vermelha e branca' />
                 <h3>Pokedex</h3>
+            </div>
+            <div className='container-user-info'>
+                <img className='user-icon' src='./assets/jigglypuff.png' alt='icone do usuario' />
+                <h2 className='user-nickname'>John Doe Doe</h2>
+                <p>Pokemons: 6</p>
             </div>
             <nav className='navgation'>
                 <Link to="/home"><i class="fa-solid fa-house"></i></Link>

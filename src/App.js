@@ -10,7 +10,7 @@ function App() {
     <div className='App'>
       <HashRouter>
       <Routes>
-        <Route exact path='/' element={<PageHome/>}/>
+        <Route exact path='/' element={<PageLogin/>}/>
         <Route exact path='/home' element={<PageHome/>}/>
         <Route path="/login" element={<PageLogin/>} />
         <Route path="/profile" element={<PageProfile />} />

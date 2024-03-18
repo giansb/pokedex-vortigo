@@ -13,6 +13,10 @@ header {
     width: 60px;
 }
 
+.user-icon {
+    width: 70px;
+}
+
 .container-icon {
     display: flex;
     flex-flow: row nowrap;

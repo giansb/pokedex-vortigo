@@ -1,8 +1,13 @@
-.perfilEdit {
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: 1px solid rgb(143, 143, 143);
+.perfil-edit {
     margin: 1rem 0 1rem 1rem;
-    background-color: rgb(227, 227, 227);
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 10px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.perfil-edit:hover {
+    background-color: rgb(209, 75, 75);
 }
