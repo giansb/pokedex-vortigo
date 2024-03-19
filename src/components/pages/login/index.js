@@ -10,10 +10,10 @@ export default function PageLogin() {
                     <h3>Pokedex</h3>
                 </div>
                 <img className='container-login-image' src="./assets/pikachu3.gif" alt="" />
-                <div className='container-login-submit'>
+                <form className='container-login-submit'>
                     <input className='input-name' type='text' placeholder='Digite o seu nome' />
                     <Link to="/home"><button className='container-login-button'>ENTRAR</button></Link>
-                </div>
+                </form>
             </div>
         </div>
     );

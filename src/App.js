@@ -9,13 +9,13 @@ function App() {
   return (
     <div className='App'>
       <HashRouter>
-      <Routes>
-        <Route exact path='/' element={<PageLogin/>}/>
-        <Route exact path='/home' element={<PageHome/>}/>
-        <Route path="/login" element={<PageLogin/>} />
-        <Route path="/profile" element={<PageProfile />} />
-      </Routes>
-    </HashRouter>
+        <Routes>
+          <Route exact path='/' element={<PageLogin />} />
+          <Route exact path='/home' element={<PageHome />} />
+          <Route path="/login" element={<PageLogin />} />
+          <Route path="/profile" element={<PageProfile />} />
+        </Routes>
+      </HashRouter>
     </div>
   );
 }
