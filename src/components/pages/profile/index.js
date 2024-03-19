@@ -5,7 +5,7 @@ import './profile.css'
 import Modal from '../../modal';
 
 
-export default function PageProfile() {
+export default function PageProfile(props) {
     const [isModalVisible, setModalVisibility] = useState(false); 
 
     function modalClickHandler() {
@@ -14,7 +14,7 @@ export default function PageProfile() {
 
     return(
        <>
-            <Header />
+            <Header username={props.username}/>
             <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' />
             <button onClick={modalClickHandler}  className='perfil-edit'>Editar perfil</button>
             <div className='container-cards max-width'>

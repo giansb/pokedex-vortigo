@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
           <Route exact path='/home' element={<PageHome username={name}/>} />
           <Route path="/login" element={<PageLogin />} />
-          <Route path="/profile" element={<PageProfile />} />
+          <Route path="/profile" element={<PageProfile username={name}/>} />
         </Routes>
       </HashRouter>
     </div>
