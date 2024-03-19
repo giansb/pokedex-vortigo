@@ -11,12 +11,19 @@ function App() {
   const[name, setName] = useState('');
   const[favorites, setFavorites] = useState([]);
 
+  const addToArray = (id) => {
+    let array = favorites;
+    array.push(id)
+    setFavorites(array)
+    console.log(favorites)
+  }
+
   return (
     <div className='App'>
       <HashRouter>
         <Routes>
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
-          <Route exact path='/home' element={<PageHome username={name} getIdPage={(e) => console.log(e + " deu certo!")}/>} />
+          <Route exact path='/home' element={<PageHome username={name} getIdPage={(e) => addToArray(e)}/>} />
           <Route path="/login" element={<PageLogin />} />
           <Route path="/profile" element={<PageProfile username={name}/>} />
         </Routes>
