@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './header.css';
 
-export default function Header() {
+export default function Header(props) {
     return (
         <header className='max-width'>
             <div className='container-icon'>
@@ -10,7 +10,7 @@ export default function Header() {
             </div>
             <div className='container-user-info'>
                 <img className='user-icon' src='./assets/jigglypuff.png' alt='icone do usuario' />
-                <h2 className='user-nickname'>John Doe Doe</h2>
+                <h2 className='user-nickname'>{props.username}</h2>
                 <p>Pokemons: 6</p>
             </div>
             <nav className='navgation'>

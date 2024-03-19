@@ -1,7 +1,18 @@
 import { Link } from 'react-router-dom';
 import './login.css';
+import { useState } from 'react';
 
-export default function PageLogin() {
+export default function PageLogin(props) {
+
+    const[name, setName] = useState();
+
+    const toDigit = (event) => {
+        setName(event.target.value)
+    }
+
+    const click = () => {
+        props.getName(name)
+    }
     return (
         <div className='center'>
             <div className='container-login'>
@@ -11,8 +22,8 @@ export default function PageLogin() {
                 </div>
                 <img className='container-login-image' src="./assets/pikachu3.gif" alt="" />
                 <form className='container-login-submit'>
-                    <input className='input-name' type='text' placeholder='Digite o seu nome' />
-                    <Link to="/home"><button className='container-login-button'>ENTRAR</button></Link>
+                    <input className='input-name' type='text' placeholder='Digite o seu nome' onChange={toDigit}/>
+                    <Link to="/home"><button className='container-login-button' onClick={click}>ENTRAR</button></Link>
                 </form>
             </div>
         </div>

@@ -5,7 +5,7 @@ import datas from '../../data/pokedex.json';
 import { useState } from 'react';
 
 
-export default function PageHome() {
+export default function PageHome(props) {
     let arrayData = JSON.parse(JSON.stringify(datas));
     const [pokeSearch, setPokeSearch] = useState('');
 
@@ -25,7 +25,7 @@ export default function PageHome() {
 
     return (
         <>
-            <Header />
+            <Header username={props.username}/>
             <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' value={pokeSearch} onChange={handleInputChange} />
             {pokeSearch === '' ? <div className='container-cards max-width'>
                 {
@@ -39,7 +39,8 @@ export default function PageHome() {
                             defense={item.base['Defense']}
                             spattack={item.base['Sp. Attack']}
                             spdefense={item.base['Sp. Defense']}
-                            speed={item.base['Speed']} />
+                            speed={item.base['Speed']} 
+                            getId={(e) => console.log(e + "foi clicado")}/>
                     })
                 }
             </div>
