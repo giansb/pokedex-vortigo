@@ -9,12 +9,14 @@ import { useState } from 'react';
 function App() {
 
   const[name, setName] = useState('');
+  const[favorites, setFavorites] = useState([]);
+
   return (
     <div className='App'>
       <HashRouter>
         <Routes>
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
-          <Route exact path='/home' element={<PageHome username={name}/>} />
+          <Route exact path='/home' element={<PageHome username={name} getIdPage={(e) => console.log(e + " deu certo!")}/>} />
           <Route path="/login" element={<PageLogin />} />
           <Route path="/profile" element={<PageProfile username={name}/>} />
         </Routes>

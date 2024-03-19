@@ -8,7 +8,7 @@ export default function Card(props) {
     const[id,setId] = useState('');
 
     const click = () => {
-        props.getId(props.id)
+        props.getIdCard(props.id)
     }
 
     return(

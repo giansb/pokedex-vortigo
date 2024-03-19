@@ -40,7 +40,7 @@ export default function PageHome(props) {
                             spattack={item.base['Sp. Attack']}
                             spdefense={item.base['Sp. Defense']}
                             speed={item.base['Speed']} 
-                            getId={(e) => console.log(e + "foi clicado")}/>
+                            getIdCard={(e) => props.getIdPage(e)}/>
                     })
                 }
             </div>
