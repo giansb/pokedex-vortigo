@@ -4,10 +4,10 @@ import './Modal.css';
 const Modal = (props) => {
     const { close } = props;
 
-    const [background, setBackground] = useState();
-
-    const backgroundColorHandler = (backgroundColor) => {
-        props.getBackgroundColor(backgroundColor)
+    const backgroundColorHandler = (e) => {
+        console.log('e.target.value');
+        props.getBackgroundColor(e.target.value);
+        console.log(e.target.value);
     }
 
     return (
@@ -17,17 +17,30 @@ const Modal = (props) => {
                     <button>Mudar Icone</button>
                     <div className='modal-container-background-edit'>
                         <label>Personalizar plano de fundo</label>
-                        <select>
-                            <option style={{ backgroundColor: '#000' }} onClick={backgroundColorHandler('#000')}></option>
-                            <option style={{ backgroundColor: '#fff' }} onSelect={backgroundColorHandler('#fff')}></option>
-                            <option onSelect={backgroundColorHandler('ola')}></option>
+                        <select onChange={backgroundColorHandler}>
+                            <option
+                                style={{background: '#FF7F00'}}
+                                value={'linear-gradient(to right, #FF7F00, #8C1717)'}
+                            ></option>
+                            <option
+                                style={{backgroundColor: '#ff0000'}}
+                                value={'linear-gradient(to right, #ff0000, #FF6EC7)'}
+                            ></option>
+                            <option
+                                style={{ backgroundColor: '#4D4DFF' }}
+                                value={'linear-gradient(to right, #4D4DFF, #9F5F9F)'}
+                            ></option>
+                            <option
+                                style={{ backgroundColor: '#32CD99' }}
+                                value={'linear-gradient(to right, #32CD99, #99CC32)'}
+                            ></option>
                         </select>
                     </div>
                     <button onClick={() => close()}>Fechar</button>
                 </div>
                 <div className='modal-container-right'>
                     <img className='user-icon' src='./assets/jigglypuff.png' alt='icone do usuario' />
-                    <h2 className='user-nickname'>John Doe Doe</h2>
+                    <h2 className='user-nickname'>{props.username}</h2>
                     <button>Editar Nickname</button>
                 </div>
                 {/* <div className="modal-card">

@@ -27,12 +27,17 @@ function App() {
     
   }
   
-  const changeBackgroundColor = (backgroundColor) => {
-    console.log(backgroundColor);
+  const [background, setBackground] = useState('');
+
+  const changeBackgroundColor = (e) => {
+    if(e !== ''){
+      setBackground(e)
+    }
+    console.log(e);
   }
 
   return (
-    <div className='App'>
+    <div className='App' style={{background: background}}>
       <HashRouter>
         <Routes>
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
