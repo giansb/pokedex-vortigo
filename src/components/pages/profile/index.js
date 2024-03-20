@@ -14,7 +14,7 @@ export default function PageProfile(props) {
 
     return(
        <>
-            <Header username={props.username}/>
+            <Header pokemonCount={props.pokemonCount} username={props.username}/>
             <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' />
             <button onClick={modalClickHandler}  className='perfil-edit'>Editar perfil</button>
             <div className='container-cards max-width'>

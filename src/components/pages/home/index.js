@@ -25,7 +25,7 @@ export default function PageHome(props) {
 
     return (
         <>
-            <Header username={props.username}/>
+            <Header pokemonCount={props.pokemonCount} username={props.username}/>
             <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' value={pokeSearch} onChange={handleInputChange} />
             {pokeSearch === '' ? <div className='container-cards max-width'>
                 {

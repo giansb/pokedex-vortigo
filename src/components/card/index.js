@@ -5,13 +5,30 @@ export default function Card(props) {
 
     let image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${props.id}.gif`
 
-    const click = () => {
-        props.getIdCard(props.id)
+    const[id,setId] = useState('');
+    const[style, setStyle] = useState('card-container');
+    const[buttonText, setButtonText] = useState('Adicionar aos favoritos')
+
+    const changeStyle = () => {
+        if(style == 'card-container') {
+            setStyle('card-container-fav');
+            setButtonText('Remover dos favoritos')
+        } else {
+            setStyle('card-container');
+            setButtonText("Adicionar aos favoritos")
+        }
     }
 
+    const click = () => {
+        props.getIdCard(props.id);
+        changeStyle();
+    }
+
+    
+
     return(
-        <div className='card-container'>
-            <button className='fav-button' onClick={click}>Adicionar aos favoritos</button>
+        <div className={style}>
+            <button className='fav-button' onClick={click}>{buttonText}</button>
             <div className='card-container-image-space'>
                 <img className='card-container-image' src={image} />
             </div>
