@@ -56,6 +56,7 @@ export default function PageHome(props) {
                         spattack={item.base['Sp. Attack']}
                         spdefense={item.base['Sp. Defense']}
                         speed={item.base['Speed']}
+                        getIdCard={(e) => props.getIdPage(e)}
                     />
                 })}
             </div>}

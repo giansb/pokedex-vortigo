@@ -24,7 +24,7 @@ export default function PageProfile(props) {
                 <Card />
                 <Card />
                 <Card />
-                {isModalVisible ? (<Modal close={() => setModalVisibility(false)}/>) : null} 
+                {isModalVisible ? (<Modal close={() => setModalVisibility(false)} getBackgroundColor={(e) => props.getBackgroundColorApp(e)}/>) : null} 
             </div>
        </> 
     );

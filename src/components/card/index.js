@@ -5,8 +5,6 @@ export default function Card(props) {
 
     let image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${props.id}.gif`
 
-    const[id,setId] = useState('');
-
     const click = () => {
         props.getIdCard(props.id)
     }

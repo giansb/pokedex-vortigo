@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import './Modal.css';
 
 const Modal = (props) => {
     const { close } = props;
+
+    const [background, setBackground] = useState();
+
+    const backgroundColorHandler = (backgroundColor) => {
+        props.getBackgroundColor(backgroundColor)
+    }
+
     return (
         <>
             <div className="modal-container">
@@ -10,12 +18,12 @@ const Modal = (props) => {
                     <div className='modal-container-background-edit'>
                         <label>Personalizar plano de fundo</label>
                         <select>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option style={{ backgroundColor: '#000' }} onClick={backgroundColorHandler('#000')}></option>
+                            <option style={{ backgroundColor: '#fff' }} onSelect={backgroundColorHandler('#fff')}></option>
+                            <option onSelect={backgroundColorHandler('ola')}></option>
                         </select>
                     </div>
-                    <button onClick={() => close()}>Salvar</button>
+                    <button onClick={() => close()}>Fechar</button>
                 </div>
                 <div className='modal-container-right'>
                     <img className='user-icon' src='./assets/jigglypuff.png' alt='icone do usuario' />
@@ -30,4 +38,4 @@ const Modal = (props) => {
     );
 }
 
-export default Modal;
+export default Modal; 

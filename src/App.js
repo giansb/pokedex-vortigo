@@ -17,6 +17,10 @@ function App() {
     setFavorites(array)
     console.log(favorites)
   }
+  
+  const changeBackgroundColor = (backgroundColor) => {
+    console.log(backgroundColor);
+  }
 
   return (
     <div className='App'>
@@ -25,7 +29,7 @@ function App() {
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
           <Route exact path='/home' element={<PageHome username={name} getIdPage={(e) => addToArray(e)}/>} />
           <Route path="/login" element={<PageLogin />} />
-          <Route path="/profile" element={<PageProfile username={name}/>} />
+          <Route path="/profile" element={<PageProfile username={name} getBackgroundColorApp={(e) => changeBackgroundColor(e)}/>} />
         </Routes>
       </HashRouter>
     </div>
