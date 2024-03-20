@@ -30,10 +30,6 @@ function App() {
   const changeBackgroundColor = (backgroundColor) => {
     console.log(backgroundColor);
   }
-  
-  const changeBackgroundColor = (backgroundColor) => {
-    console.log(backgroundColor);
-  }
 
   return (
     <div className='App'>
