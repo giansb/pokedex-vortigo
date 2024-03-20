@@ -10,12 +10,21 @@ function App() {
 
   const[name, setName] = useState('');
   const[favorites, setFavorites] = useState([]);
+  const[favLength, setFavLength] = useState(0);
 
   const addToArray = (id) => {
     let array = favorites;
-    array.push(id)
-    setFavorites(array)
-    console.log(favorites)
+    if(favorites.indexOf(id) < 0) {
+      array.push(id)
+      
+    } else {
+      array.splice(favorites.indexOf(id), 1);
+    }
+
+      setFavorites(array)
+      console.log(favorites)
+      setFavLength(favorites.length)
+    
   }
 
   return (
@@ -23,9 +32,8 @@ function App() {
       <HashRouter>
         <Routes>
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
-          <Route exact path='/home' element={<PageHome username={name} getIdPage={(e) => addToArray(e)}/>} />
-          <Route path="/login" element={<PageLogin />} />
-          <Route path="/profile" element={<PageProfile username={name}/>} />
+          <Route exact path='/home' element={<PageHome username={name} pokemonCount={favLength} getIdPage={(e) => addToArray(e)}/>} />
+          <Route path="/profile" element={<PageProfile pokemonCount={favLength} username={name}/>} />
         </Routes>
       </HashRouter>
     </div>

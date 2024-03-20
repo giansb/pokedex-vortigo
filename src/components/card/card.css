@@ -9,6 +9,17 @@
     position: relative;
 }
 
+.card-container-fav {
+    background-color: rgb(193, 176, 21);
+    width: calc(100%/3.3 - 10px);
+    height: 400px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 3px solid red;
+    transition: scale 400ms;
+    position: relative;
+}
+
 .fav-button {
     position: absolute;
     bottom: 50%;
@@ -28,6 +39,10 @@
 }
 
 .card-container:hover .fav-button {
+    display: block;
+}
+
+.card-container-fav:hover .fav-button {
     display: block;
 }
 

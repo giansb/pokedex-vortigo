@@ -11,12 +11,12 @@ export default function Header(props) {
             <div className='container-user-info'>
                 <img className='user-icon' src='./assets/jigglypuff.png' alt='icone do usuario' />
                 <h2 className='user-nickname'>{props.username}</h2>
-                <p>Pokemons: 6</p>
+                <p>Pokemons favoritos: {props.pokemonCount}</p>
             </div>
             <nav className='navgation'>
                 <Link to="/home"><i class="fa-solid fa-house"></i></Link>
                 <Link to="/profile"><i class="fa-solid fa-user"></i></Link>
-                <Link to="/login"><i class="fa-solid fa-right-from-bracket"></i></Link>
+                <Link to="/"><i class="fa-solid fa-right-from-bracket"></i></Link>
             </nav>
         </header>
     );
