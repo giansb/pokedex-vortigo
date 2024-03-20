@@ -12,11 +12,15 @@ const RenderCards = (props) => {
     };
 
     const filterByNameAndType = (item) => {
-        if (item.name['english'].toLowerCase().includes(pokeSearch.toLowerCase())
-         || item.type.map(type => type.toLowerCase()).includes(pokeSearch.toLowerCase())) {
+        if(pokeSearch.length>=1) {
+            if (item.name['english'].toLowerCase().includes(pokeSearch.toLowerCase())
+            || item.type.map(type => type.toLowerCase()).includes(pokeSearch.toLowerCase())) {
+                return item;
+            }
+
+        } else {
             return item;
-        }
-        return null;
+                }
     }
 
     const searchResult = arrayData.filter(filterByNameAndType);
@@ -24,24 +28,8 @@ const RenderCards = (props) => {
     return(
         <>
         <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' value={pokeSearch} onChange={handleInputChange} />
-            {pokeSearch === '' ? <div className='container-cards max-width'>
-                {
-                    arrayData.map((item, id) => {
-                        return <Card
-                            key={id + 1}
-                            name={item.name['english']}
-                            id={id + 1}
-                            hp={item.base['HP']}
-                            attack={item.base['Attack']}
-                            defense={item.base['Defense']}
-                            spattack={item.base['Sp. Attack']}
-                            spdefense={item.base['Sp. Defense']}
-                            speed={item.base['Speed']} 
-                            getIdCard={(e) => props.getIdPage(e)}/>
-                    })
-                }
-            </div>
-            : <div className='container-cards max-width'>
+            
+            <div className='container-cards max-width'>
                 {searchResult.map((item, index) => {
                     return <Card
                         key={index + 1}
@@ -55,7 +43,7 @@ const RenderCards = (props) => {
                         speed={item.base['Speed']}
                     />
                 })}
-            </div>}
+            </div>
         </>
     );
 }
