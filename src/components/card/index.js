@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './card.css';
 
 export default function Card(props) {
@@ -17,6 +17,7 @@ export default function Card(props) {
             setTimeout(() => {
             setGifVisible(false);
             }, 2300);
+            
         } else {
             setStyle('card-container');
             setButtonText("Adicionar aos favoritos")
@@ -28,10 +29,21 @@ export default function Card(props) {
         changeStyle();
     }
 
-    
-
+    useEffect(() => {
+        if(props.isFav) {
+            setStyle('card-container-fav');
+            setButtonText('Remover dos favoritos')
+        } else {
+            setStyle('card-container');
+            setButtonText("Adicionar aos favoritos")
+        }
+    }, [props.isFav]);
+ 
+        
     return(
+        
         <div className={style}>
+            {props.isFav && changeStyle}
             {gifVisible && <img className='gif-animation' src='./assets/animation.gif' />}
             <button className='fav-button' onClick={click}>{buttonText}</button>
             <div className='card-container-image-space'>

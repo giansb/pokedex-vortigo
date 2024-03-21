@@ -13,6 +13,7 @@ function App() {
   const [favLength, setFavLength] = useState(0);
   const [userIcon, setUserIcon] = useState('./assets/treinador-de-pokemon.png');
   const [appState, setAppState] = useState();
+  const [background, setBackground] = useState('#fff');
 
   const addToArray = (id) => {
     let array = favorites;
@@ -29,7 +30,7 @@ function App() {
 
   }
 
-  const [background, setBackground] = useState('#fff');
+  
 
   const changeBackgroundColor = (e) => {
     setBackground(e)

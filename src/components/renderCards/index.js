@@ -6,6 +6,7 @@ import Card from '../card';
 const RenderCards = (props) => {
     let arrayData = JSON.parse(JSON.stringify(datas));
     const [pokeSearch, setPokeSearch] = useState('');
+    const[isFav, setIsfav] = useState(false);
 
     const handleInputChange = (e) => {
         setPokeSearch(e.target.value);
@@ -24,13 +25,24 @@ const RenderCards = (props) => {
     }
 
     const searchResult = arrayData.filter(filterByNameAndType);
-
+    //favArray
     return(
         <>
         <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' value={pokeSearch} onChange={handleInputChange} />
             
             <div className='container-cards max-width'>
                 {searchResult.map((item, index) => {
+                    let fav = false;
+                    if(props.favArray.indexOf(item.id) >= 0) {
+                        fav = true;
+                    } else {
+                        
+                        
+                    }
+                    
+
+                    
+
                     return <Card
                         key={index + 1}
                         name={item.name['english']}
@@ -42,6 +54,8 @@ const RenderCards = (props) => {
                         spdefense={item.base['Sp. Defense']}
                         speed={item.base['Speed']}
                         getIdCard={(e) => props.getIdCard(e)}
+                        isFav ={fav}
+                        
                     />
                 })}
             </div>
