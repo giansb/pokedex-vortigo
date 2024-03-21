@@ -11,6 +11,7 @@ function App() {
   const[name, setName] = useState('');
   const[favorites, setFavorites] = useState([]);
   const[favLength, setFavLength] = useState(0);
+  const [background, setBackground] = useState('');
 
   const addToArray = (id) => {
     let array = favorites;
@@ -27,7 +28,7 @@ function App() {
     
   }
   
-  const [background, setBackground] = useState('');
+  
 
   const changeBackgroundColor = (e) => {
     if(e !== ''){
@@ -41,8 +42,8 @@ function App() {
       <HashRouter>
         <Routes>
           <Route exact path='/' element={<PageLogin getName={(e) => setName(e)}/>} />
-          <Route exact path='/home' element={<PageHome username={name} pokemonCount={favLength} getIdPage={(e) => addToArray(e)}/>} />
-          <Route path="/profile" element={<PageProfile pokemonCount={favLength} username={name} getBackgroundColorApp={(e) => changeBackgroundColor(e)}/>} />
+          <Route exact path='/home' element={<PageHome favArray={favorites} username={name} pokemonCount={favLength} getIdPage={(e) => addToArray(e)}/>} />
+          <Route path="/profile" element={<PageProfile favArray={favorites} username={name} pokemonCount={favLength} getBackgroundColorApp={(e) => changeBackgroundColor(e)}/>} />
         </Routes>
       </HashRouter>
     </div>
