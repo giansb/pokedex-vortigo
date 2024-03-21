@@ -1,0 +1,93 @@
+.container-icons-modal {
+    min-height: 50%;
+    background-color: rgba(202, 65, 99, 0.5);
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.jigglypuff {
+    transition: scale 400ms;
+    width: 26%;
+}
+
+.jigglypuff:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.meowth {
+    transition: scale 400ms;
+    width: 26%;
+}
+
+.meowth:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.pikachu {
+    transition: scale 400ms;
+    width: 26%;
+}
+
+.pikachu:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.psyduck {
+    transition: scale 400ms;
+    width: 26%;
+}
+
+.psyduck:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.treinador-de-pokemon {
+    transition: scale 400ms;
+    width: 26%;
+}
+
+.treinador-de-pokemon:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.venonat {
+    transition: scale 400ms;
+    width: 26%;
+}
+
+.venonat:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.closeBtn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.closeBtn:hover {
+    background-color: rgb(209, 75, 75);
+}
+
+@media screen and (max-width: 760px) {
+    .closeBtn {
+        margin-left: 80%;
+    }
+}
