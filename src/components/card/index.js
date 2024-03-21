@@ -19,8 +19,11 @@ export default function Card(props) {
             }, 2300);
             
         } else {
-            setStyle('card-container');
-            setButtonText("Adicionar aos favoritos")
+            if(!props.justFavCards) {
+                setStyle('card-container');
+                setButtonText("Adicionar aos favoritos")
+            }
+            
         }
     }
 
@@ -34,8 +37,7 @@ export default function Card(props) {
             setStyle('card-container-fav');
             setButtonText('Remover dos favoritos')
         } else {
-            setStyle('card-container');
-            setButtonText("Adicionar aos favoritos")
+            
         }
     }, [props.isFav]);
  

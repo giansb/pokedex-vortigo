@@ -1,12 +1,32 @@
 import datas from '../data/pokedex.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Card from '../card';
 
 
 const RenderCards = (props) => {
-    let arrayData = JSON.parse(JSON.stringify(datas));
+    const[arrayData, setArrayData] = useState([]);
+    let arrayD = JSON.parse(JSON.stringify(datas));
     const [pokeSearch, setPokeSearch] = useState('');
-    const[isFav, setIsfav] = useState(false);
+
+    const filterByFav = (item) => {
+        if(props.favArray.indexOf(item.id) >= 0) {
+            return item;
+        }
+    }
+
+    useEffect(() => {
+        if(props.justFavCards) {
+            
+
+             arrayD = arrayD.filter(filterByFav);
+            setArrayData(arrayD)
+        } else {
+             arrayD = JSON.parse(JSON.stringify(datas));
+            setArrayData(arrayD)
+        }
+
+        
+    }, [props.justFavCards]);
 
     const handleInputChange = (e) => {
         setPokeSearch(e.target.value);
@@ -39,10 +59,6 @@ const RenderCards = (props) => {
                         
                         
                     }
-                    
-
-                    
-
                     return <Card
                         key={index + 1}
                         name={item.name['english']}
@@ -53,8 +69,16 @@ const RenderCards = (props) => {
                         spattack={item.base['Sp. Attack']}
                         spdefense={item.base['Sp. Defense']}
                         speed={item.base['Speed']}
-                        getIdCard={(e) => props.getIdCard(e)}
+                        getIdCard={(e) => {
+                            props.getIdCard(e)
+                            if(props.justFavCards) {
+                                arrayD = arrayD.filter(filterByFav);
+                                setArrayData(arrayD)
+                                
+                            }
+                        }}
                         isFav ={fav}
+                        justFavCards={props.justFavCards}
                         
                     />
                 })}
