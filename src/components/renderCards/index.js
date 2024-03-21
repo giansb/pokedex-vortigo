@@ -33,7 +33,7 @@ const RenderCards = (props) => {
             <div className='container-cards max-width'>
                 {searchResult.map((item, index) => {
                     let fav = false;
-                    if(props.favArray.indexOf(index+1) >= 0) {
+                    if(props.favArray.indexOf(item.id) >= 0) {
                         fav = true;
                     } else {
                         
