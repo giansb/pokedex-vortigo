@@ -1,20 +1,46 @@
 import { useState } from 'react';
 import './Modal.css';
+import IconModal from '../iconModal';
 
 const Modal = (props) => {
     const { close } = props;
+    const [nickClass, setNickClass] = useState('hide');
+    const [nickEdit, setNickEdit] = useState('Editar Nickname');
+    const [isModalVisible, setModalVisibility] = useState(false); 
+
+    function modalClickHandler() {
+        setModalVisibility(true);
+    }
 
     const backgroundColorHandler = (e) => {
-        console.log('e.target.value');
         props.getBackgroundColor(e.target.value);
-        console.log(e.target.value);
+    }
+
+    const nicknameHandler = () => {
+        if(nickClass === 'hide') {
+            setNickClass('');
+            setNickEdit('Cancelar')
+        } else {
+            setNickClass('hide');
+            setNickEdit('Editar Nickname')
+        }
+    }
+
+    const nicknameChangeHandler = (e) => {
+        e.preventDefault();
+        props.getNewNickProfile(document.getElementById('inputNickEdit').value);
+        nicknameHandler();
+    }
+
+    const getNewUserIconModal = (e) => {
+        props.getNewUserIconProfile(e);
     }
 
     return (
         <>
             <div className="modal-container">
                 <div className='modal-container-left'>
-                    <button>Mudar Icone</button>
+                    <button onClick={modalClickHandler}>Mudar Icone</button>
                     <div className='modal-container-background-edit'>
                         <label>Personalizar plano de fundo</label>
                         <select onChange={backgroundColorHandler}>
@@ -39,13 +65,15 @@ const Modal = (props) => {
                     <button onClick={() => close()}>Fechar</button>
                 </div>
                 <div className='modal-container-right'>
-                    <img className='user-icon' src='./assets/jigglypuff.png' alt='icone do usuario' />
+                    <img className='user-icon' src={props.userIcon} alt='icone do usuario' />
                     <h2 className='user-nickname'>{props.username}</h2>
-                    <button>Editar Nickname</button>
+                    <form className={nickClass} onSubmit={nicknameChangeHandler}>
+                        <input id='inputNickEdit' type='text' placeholder='Digite seu novo nick'></input>
+                        <button type='submit'>Salvar</button>
+                    </form>
+                    <button onClick={nicknameHandler}>{nickEdit}</button>
                 </div>
-                {/* <div className="modal-card">
-                    <button onClick={() => close()}>Fechar</button>
-                </div> */}
+                {isModalVisible ? (<IconModal getNewUserIconModal={(e) => getNewUserIconModal(e)} close={() => setModalVisibility(false)} />) : null} 
             </div>
         </>
     );

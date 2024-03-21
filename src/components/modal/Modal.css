@@ -64,6 +64,10 @@
     background-color: rgb(209, 75, 75);
 }
 
+.hide {
+    display: none;
+}
+
 @media screen and (max-width: 760px) {
     .modal-container {
         flex-direction: column-reverse;

@@ -12,9 +12,13 @@ export default function PageProfile(props) {
         setModalVisibility(true);
     }
 
+    const getNewUserIconProfile = (e) => {
+        props.getNewUserIconApp(e);
+    }
+
     return(
        <>
-            <Header pokemonCount={props.pokemonCount} username={props.username}/>
+            <Header logOutHome={(e) => props.logOutApp(e)} userIcon={props.userIcon} pokemonCount={props.pokemonCount} username={props.username}/>
             <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' />
             <button onClick={modalClickHandler}  className='perfil-edit'>Editar perfil</button>
             <div className='container-cards max-width'>
@@ -24,7 +28,7 @@ export default function PageProfile(props) {
                 <Card />
                 <Card />
                 <Card />
-                {isModalVisible ? (<Modal username={props.username} close={() => setModalVisibility(false)} getBackgroundColor={(e) => props.getBackgroundColorApp(e)}/>) : null} 
+                {isModalVisible ? (<Modal userIcon={props.userIcon} getNewUserIconProfile={(e) => getNewUserIconProfile(e)} getNewNickProfile={(e) => props.getNewNickApp(e)} username={props.username} close={() => setModalVisibility(false)} getBackgroundColor={(e) => props.getBackgroundColorApp(e)}/>) : null} 
             </div>
        </> 
     );

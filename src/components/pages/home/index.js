@@ -5,12 +5,11 @@ import './home.css';
 
 
 export default function PageHome(props) {
-    
 
     return (
         <>
-            <Header pokemonCount={props.pokemonCount} username={props.username}/>
-            <RenderCards favArray={props.favArray} getIdCard={(e) => props.getIdPage(e) }/>
+            <Header logOutHome={(e) => props.logOutApp(e)} userIcon={props.userIcon} pokemonCount={props.pokemonCount} username={props.username}/>
+            <RenderCards getIdCard={(e) => props.getIdPage(e)}/>
         </>
     );
 }
