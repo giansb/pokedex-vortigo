@@ -10,7 +10,7 @@ export default function PageHome(props) {
     return (
         <>
             <Header pokemonCount={props.pokemonCount} username={props.username}/>
-            <RenderCards getIdPage={(e) => props.getIdPage(e)}/>
+            <RenderCards getIdCard={(e) => props.getIdPage(e)}/>
         </>
     );
 }
