@@ -1,4 +1,4 @@
-import './iconModal.css';
+import './iconmodal.css';
 
 const IconModal = (props) => {
     const { close } = props;

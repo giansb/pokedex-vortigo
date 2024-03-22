@@ -11,3 +11,10 @@
 .perfil-edit:hover {
     background-color: rgb(209, 75, 75);
 }
+
+.direction {
+    display: flex;
+    flex-flow:  column nowrap;
+    align-items: center;
+    justify-content: center;
+}

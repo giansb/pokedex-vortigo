@@ -57,9 +57,32 @@ function App() {
     <div className='App' style={{ background: background }}>
       <HashRouter>
         <Routes>
-          <Route exact path='/' element={<PageLogin getName={(e) => setName(e)} />} />
-          <Route exact path='/home' element={<PageHome favArray={favorites} logOutApp={(e) => logOutAppp(e)} userIcon={userIcon} username={name} pokemonCount={favLength} getIdPage={(e) => addToArray(e)} />} />
-          <Route path="/profile" element={<PageProfile favArray={favorites} logOutApp={(e) => logOutAppp(e)} userIcon={userIcon} getNewUserIconApp={(e) => changeUserIcon(e)} pokemonCount={favLength} username={name} getNewNickApp={(e) => changeNickname(e)} getBackgroundColorApp={(e) => changeBackgroundColor(e)}  getIdPage={(e) => addToArray(e)}/>} />
+
+          <Route exact path='/' element={
+            <PageLogin getName={(e) => setName(e)} />
+          }/>
+
+          <Route exact path='/home' element={
+            <PageHome 
+              favArray={favorites}
+              logOutApp={(e) => logOutAppp(e)} userIcon={userIcon}
+              username={name} pokemonCount={favLength}
+              getIdPage={(e) => addToArray(e)} />
+          }/>
+
+          <Route path="/profile" element={
+            <PageProfile 
+              favArray={favorites} 
+              logOutApp={(e) => logOutAppp(e)} 
+              userIcon={userIcon} 
+              getNewUserIconApp={(e) => changeUserIcon(e)} 
+              pokemonCount={favLength} 
+              username={name} 
+              getNewNickApp={(e) => changeNickname(e)} 
+              getBackgroundColorApp={(e) => changeBackgroundColor(e)}  
+              getIdPage={(e) => addToArray(e)}/>
+          }/>
+          
         </Routes>
       </HashRouter>
     </div>

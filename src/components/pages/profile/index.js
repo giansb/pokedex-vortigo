@@ -4,7 +4,6 @@ import './profile.css'
 import Modal from '../../modal';
 import RenderCards from '../../renderCards';
 
-
 export default function PageProfile(props) {
     const [isModalVisible, setModalVisibility] = useState(false); 
 
@@ -18,12 +17,28 @@ export default function PageProfile(props) {
 
     return(
        <>
-            <Header logOutHome={(e) => props.logOutApp(e)} userIcon={props.userIcon} pokemonCount={props.pokemonCount} username={props.username}/>
-            <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' />
+            <Header 
+                logOutHome={(e) => props.logOutApp(e)} 
+                userIcon={props.userIcon} 
+                pokemonCount={props.pokemonCount} 
+                username={props.username}
+            />
+            <div className='direction'>
             <button onClick={modalClickHandler}  className='perfil-edit'>Editar perfil</button>
-            <div className='container-cards max-width'>
-                <RenderCards favArray={props.favArray} getIdCard={(e) => props.getIdPage(e)} justFavCards={true}/>
-                {isModalVisible ? (<Modal userIcon={props.userIcon} getNewUserIconProfile={(e) => getNewUserIconProfile(e)} getNewNickProfile={(e) => props.getNewNickApp(e)} username={props.username} close={() => setModalVisibility(false)} getBackgroundColor={(e) => props.getBackgroundColorApp(e)}/>) : null} 
+            <h1>Seus pokemons favoritos:</h1>
+                <RenderCards 
+                    favArray={props.favArray}
+                    getIdCard={(e) => props.getIdPage(e)} 
+                    justFavCards={true}
+                />
+                {isModalVisible ? (<Modal 
+                                        userIcon={props.userIcon} 
+                                        getNewUserIconProfile={(e) => getNewUserIconProfile(e)} 
+                                        getNewNickProfile={(e) => props.getNewNickApp(e)} 
+                                        username={props.username} 
+                                        close={() => setModalVisibility(false)} 
+                                        getBackgroundColor={(e) => props.getBackgroundColorApp(e)}
+                                    />) : null} 
             </div>
        </> 
     );

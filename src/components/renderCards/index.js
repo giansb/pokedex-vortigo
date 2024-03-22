@@ -1,7 +1,7 @@
 import datas from '../data/pokedex.json';
 import { useEffect, useState } from 'react';
 import Card from '../card';
-
+import './rendercards.css';
 
 const RenderCards = (props) => {
     const[arrayData, setArrayData] = useState([]);
@@ -16,15 +16,12 @@ const RenderCards = (props) => {
 
     useEffect(() => {
         if(props.justFavCards) {
-            
-
-             arrayD = arrayD.filter(filterByFav);
+            arrayD = arrayD.filter(filterByFav);
             setArrayData(arrayD)
         } else {
              arrayD = JSON.parse(JSON.stringify(datas));
             setArrayData(arrayD)
         }
-
         
     }, [props.justFavCards]);
 
@@ -45,7 +42,7 @@ const RenderCards = (props) => {
     }
 
     const searchResult = arrayData.filter(filterByNameAndType);
-    //favArray
+
     return(
         <>
         <input className='search-input' type='text' placeholder='Digite um nome ou tipo de Pokemon' value={pokeSearch} onChange={handleInputChange} />
@@ -55,9 +52,6 @@ const RenderCards = (props) => {
                     let fav = false;
                     if(props.favArray.indexOf(item.id) >= 0) {
                         fav = true;
-                    } else {
-                        
-                        
                     }
                     return <Card
                         key={index + 1}
@@ -74,7 +68,6 @@ const RenderCards = (props) => {
                             if(props.justFavCards) {
                                 arrayD = arrayD.filter(filterByFav);
                                 setArrayData(arrayD)
-                                
                             }
                         }}
                         isFav ={fav}

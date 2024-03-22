@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Modal.css';
+import './modal.css';
 import IconModal from '../iconModal';
 
 const Modal = (props) => {

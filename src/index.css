@@ -22,3 +22,10 @@ code {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+.container-cards {
+  padding: 40px 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
