@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pokedex-vortigo/static/css/main.ebe0bdf1.css",
-    "main.js": "/pokedex-vortigo/static/js/main.63dd4bf9.js",
+    "main.js": "/pokedex-vortigo/static/js/main.63490dda.js",
     "static/media/background2.jpg": "/pokedex-vortigo/static/media/background2.6b00718d2a11e9ec5523.jpg",
     "index.html": "/pokedex-vortigo/index.html",
     "main.ebe0bdf1.css.map": "/pokedex-vortigo/static/css/main.ebe0bdf1.css.map",
-    "main.63dd4bf9.js.map": "/pokedex-vortigo/static/js/main.63dd4bf9.js.map"
+    "main.63490dda.js.map": "/pokedex-vortigo/static/js/main.63490dda.js.map"
   },
   "entrypoints": [
     "static/css/main.ebe0bdf1.css",
-    "static/js/main.63dd4bf9.js"
+    "static/js/main.63490dda.js"
   ]
 }
