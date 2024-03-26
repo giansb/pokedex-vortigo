@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<img src="https://github.com/giansb/pokedex-vortigo/assets/107221898/bbbf60b4-22af-4ee6-8c06-c4994e3b190d" width="100%" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Documentação do Projeto - Pokedex em React.js
 
-## Available Scripts
+Este projeto é uma Pokedex desenvolvida em React.js, permitindo aos usuários explorar e gerenciar uma coleção de pokemons. A aplicação inclui recursos como tela de login, visualização de cards de pokemons, filtragem por nome e tipo, adição e remoção de favoritos, página de perfil com personalização e funcionalidade de logout.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
 
-### `npm start`
+- React.js
+- JavaScript
+- HTML
+- CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+1. **Tela de Login:**
+   
+   <img src="https://github.com/giansb/pokedex-vortigo/assets/107221898/5e2e3424-06f6-41b3-bc17-8b8d6be64fc9" width="100%"/>
+   
+   - Permite ao usuário entrar com um nome, que será salvo em uma variável de estado.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Tela Home:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   <img src="https://github.com/giansb/pokedex-vortigo/assets/107221898/ff42124f-0a29-4661-a7d7-e0cb6b382fc9" width="100%"/>
+   
+   - Carrega cards de pokemons na tela principal da aplicação.
+   - Possui um input para filtrar os pokemons por nome e tipo.
+   - Ao clicar em um card de pokemon, é exibida uma animação de pokebola indicando que o pokemon foi adicionado aos favoritos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Página de Perfil:**
 
-### `npm run eject`
+<img src="https://github.com/giansb/pokedex-vortigo/assets/107221898/53d3cdf4-7451-4cc7-9c4a-f1dd4fff0387" width="100%"/>
+   
+   - Permite visualizar e filtrar os pokemons favoritos.
+   - Oferece a opção de remover pokemons dos favoritos.
+   - Permite editar o perfil, incluindo mudança de cor de fundo das páginas, alteração de ícone do perfil e nome.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+8. **Logout:**
+   - Ao clicar no ícone de sair no cabeçalho, os states são limpos, permitindo ao usuário entrar novamente com outro nome e personalizar o perfil novamente.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalação e Uso
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone o repositório para sua máquina local.
+2. Navegue até o diretório do projeto e execute `npm install` para instalar as dependências.
+3. Execute `npm start` para iniciar a aplicação localmente.
+4. Acesse a aplicação em seu navegador através do endereço `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Observações
 
-## Learn More
+- Certifique-se de possuir o Node.js e o npm instalados em sua máquina.
+- Para adicionar mais funcionalidades, como integração com uma API de pokemons ou persistência de dados, considere expandir o projeto conforme necessário.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Autores
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Gian](https://github.com/giansb)
+  
+- [Murilo](https://github.com/lacerdamurilo)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
